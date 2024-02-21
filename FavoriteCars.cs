@@ -7,5 +7,5 @@ public class FavoriteCars
     public int CarId { get; set; }
 
     public User User { get; set; }
-    public List<Car> Cars { get; set; }
+    public Car Car { get; set; }
 }

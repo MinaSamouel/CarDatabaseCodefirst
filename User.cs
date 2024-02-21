@@ -11,6 +11,9 @@ public class User
     public string Image { get; set; }
     public bool IsAdmin { get; set; }
 
-    //public FavoriteCars FavoriteCars { get; set; }
+    public List<FavoriteCars> FavoriteCars { get; set; }
     //public List<Car> Cars { get; set; }
+    public List<Reservation> Reservations { get; set; }
+
+    public List<Review> Reviews { get; set; }
 }

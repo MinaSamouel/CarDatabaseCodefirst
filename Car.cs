@@ -15,4 +15,9 @@ public class Car
     public bool IsAutomatic { get; set; }
     public bool HasAirCondition { get; set; }
 
+    public List<FavoriteCars> FavoriteCars { get; set; }
+    public List<Reservation> Reservations { get; set; }
+
+    public List<Review> Reviews { get; set; }
+
 }
