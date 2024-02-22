@@ -22,6 +22,9 @@
             { new DateTime(2022, 1, 1), new DateTime(2021, 6, 1), new DateTime(2020, 3, 1), new DateTime(2019, 9, 1), new DateTime(2018, 5, 1), new DateTime(2017, 12, 1), new DateTime(2016, 8, 1), new DateTime(2015, 4, 1), new DateTime(2014, 11, 1), new DateTime(2013, 7, 1)
             };
 
+            string[] modelYearsString =
+            { "2022", "2021", "2020", "2019", "2018", "2017", "2016", "2015", "2014", "2013" };
+
             int[] pricesPerDay =
             { 50, 70, 40, 60, 80, 55,65, 75, 90, 55 };
 
@@ -60,7 +63,7 @@
                 {
                     Name = carNames[i],
                     Brand = carBrands[i],
-                    ModelYear = modelYears[i],
+                    ModelYear = modelYearsString[i],
                     Color = carColors[i],
                     Category = carCategories[i],
                     SeatCount = seatCounts[i],

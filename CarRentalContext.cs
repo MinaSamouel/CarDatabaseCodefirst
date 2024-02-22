@@ -37,7 +37,7 @@ public class CarRentalContext : DbContext
 
         modelBuilder.Entity<Car>()
             .Property(c => c.ModelYear)
-            .HasColumnType("date")
+            .HasColumnType("nvarchar(20)")
             .IsRequired();
 
         modelBuilder.Entity<Car>()
@@ -181,6 +181,9 @@ public class CarRentalContext : DbContext
             .WithMany(c => c.Reservations)
             .HasForeignKey(r => r.CarId);
 
+        modelBuilder.Entity<Reservation>()
+            .Property(r => r.TotalPrice)
+            .HasColumnType("decimal(5,2)");
         #endregion
 
         #region Creating Review table
@@ -195,8 +198,7 @@ public class CarRentalContext : DbContext
 
         modelBuilder.Entity<Review>()
             .Property(rv => rv.Rate)
-            .HasColumnName("Review_Rate")
-            .HasColumnType("decimal(2,1)");
+            .HasColumnName("Review_Rate");
 
         modelBuilder.Entity<Review>()
             .HasOne(rv => rv.Reservation)

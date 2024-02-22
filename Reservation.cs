@@ -9,6 +9,8 @@ public class Reservation
     public DateTime StartRentTime { get; set; }
     public DateTime EndRentDate { get; set; }
 
+    public double TotalPrice { get; set; }
+
     public Car Car { get; set; }
     public User User { get; set; }
 
